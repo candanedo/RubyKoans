@@ -48,3 +48,4 @@ class AboutObjects < Neo::Koan
     assert_equal true, obj.object_id != copy.object_id
   end
 end
+#Mistake I upload as the first excersice when it was supposed to be the eigth
