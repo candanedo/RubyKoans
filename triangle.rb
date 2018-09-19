@@ -15,6 +15,16 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  if a == 0 || b == 0 || c == 0
+  	raise TriangleError
+  end
+  #array = [a,b,c].sort
+  #if (array[0] + array[1]) <= array[2] || (array[1] + array[2]) <= array[0] || (array[2] + array[0]) <= array[1]
+  #	raise TriangleError 
+  #end
+  if (a + b) <= c || (b + c) <= a || (c + a) <= b
+  	raise TriangleError
+  end
   if a == b && b == c
   	:equilateral
   elsif a == b || a == c || b == c
@@ -27,3 +37,5 @@ end
 # Error class used in part 2.  No need to change this code.
 class TriangleError < StandardError
 end
+
+
